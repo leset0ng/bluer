@@ -233,19 +233,19 @@ pub struct Advertisement {
     /// units are in dBm.
     pub tx_power: Option<i16>,
 
-    /// List of UUIDs to include in the "Service UUID" field of the Scan Response Data.
+    /// List of UUIDs to include in the "Service UUID" field of the Scan Response Data.[experimental]
     pub scan_response_service_uuids: BTreeSet<Uuid>,
-    /// Manufacturer Data fields to include in the Scan Response Data.
+    /// Manufacturer Data fields to include in the Scan Response Data.[experimental]
     ///
     /// Keys are the Manufacturer ID to associate with the data.
     pub scan_response_manufacturer_data: BTreeMap<u16, Vec<u8>>,
-    /// List of UUIDs to include in the "Service Solicitation" field of the Scan Response Data.
+    /// List of UUIDs to include in the "Service Solicitation" field of the Scan Response Data.[experimental]
     pub scan_response_solicit_uuids: BTreeSet<Uuid>,
-    /// Service Data elements to include in the Scan Response Data.
+    /// Service Data elements to include in the Scan Response Data.[experimental]
     ///
     /// The keys are the UUID to associate with the data.
     pub scan_response_service_data: BTreeMap<Uuid, Vec<u8>>,
-    /// Scan Response Data to include.
+    /// Scan Response Data to include.[experimental]
     ///
     /// Key is the advertising type and value is the data as byte array.
     pub scan_response_data: BTreeMap<u8, Vec<u8>>,
